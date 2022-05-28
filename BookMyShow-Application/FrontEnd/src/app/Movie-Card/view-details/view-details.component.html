@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="ticker">
+    <div class="title">
+      <h5>{{movielistsservice.movieName}}</h5>
+    </div>
+    <div class="news">
+      <marquee class="news-content">
+        <p>Enjoy the movie in your Nearest Theaters</p>
+        <p>Dont Forgot to avail todays offers</p>
+        <p>Have a nice day....</p>
+      </marquee>
+    </div>
+  </div>
+</div>
+
+
+<div class="align-items-center p-5 pgView">
+  <h3>Book Your Tickets For <span>{{movielistsservice.movieName}}</span></h3>
+  <div *ngFor="let theater of movielistsservice.theaters;let ind=index;" class="p-2">
+    <div class="d-flex align-items-center">
+      <div>
+        <h5 class="me-5">{{theater.name}}</h5>
+      </div>
+      <div class="d-flex p-2 shows">
+        <button (click)="onTicketBook(1,theater.id)" type="button" class="btn btn-outline-success" data-toggle="modal"
+          data-target="#exampleModal">9:00</button>
+        <button (click)="onTicketBook(2,theater.id)" type="button" class="btn btn-outline-success" data-toggle="modal"
+          data-target="#exampleModal">1:00</button>
+        <button (click)="onTicketBook(3,theater.id)" type="button" class="btn btn-outline-success" data-toggle="modal"
+          data-target="#exampleModal">6:00</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Book Ticket</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5>Tickets Available: <span>{{movielistsservice.ticketsAvailable}}</span></h5>
+        <h5>Ticket price: 200</h5>
+        <label>Enter the No. of Tickets:</label>
+        <input [(ngModel)]="ticketsNo" type="text" placeholder="Max-6 tickets"><br>
+        <span class="err" *ngIf="invalidTickets">Invalid No of Tickets</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        <button (click)="onBook()" type="button" class="btn btn-success">Book</button>
+      </div>
+    </div>
+  </div>
+</div>

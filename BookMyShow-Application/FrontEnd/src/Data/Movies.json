@@ -1,0 +1,26 @@
+[
+    {
+        "ID": 1,
+        "Name": "RRR",
+        "Language": "Telugu",
+        "Image":"RRR1.jpg"
+    },
+    {
+        "ID": 2,
+        "Name": "Radhe Shaym",
+        "Language": "Telugu",
+        "Image":"RS.jpg"
+    },
+    {
+        "ID": 3,
+        "Name": "Bheemla nayak",
+        "Language": "Telugu",
+        "Image":"BN.jpg"
+    },
+    {
+        "ID": 4,
+        "Name": "Sarkaru Vari Pata",
+        "Language": "Telugu",
+        "Image":"SVP.jpg"
+    }
+]
