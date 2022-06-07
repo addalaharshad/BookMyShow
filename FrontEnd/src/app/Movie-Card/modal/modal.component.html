@@ -1,0 +1,15 @@
+<div class="modal-header">
+    <h4 class="modal-title">Hi there!</h4>
+</div>
+<div class="modal-body">
+    <div class="row ml-2">
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2" *ngFor="let seat of onCounter(100);let i = index">
+          <label>
+          <input #tasknote [checked]="checkedStatus[i]" [disabled]="checkedStatus[i]" type="checkbox" (click)="onCheck($event,i)">{{i+1}}
+          </label>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="onSave()">Save</button>
+</div>
