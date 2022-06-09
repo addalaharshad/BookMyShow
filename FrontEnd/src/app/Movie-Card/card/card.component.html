@@ -1,0 +1,10 @@
+<div class="card bg-secondary">
+    <img class="movImg" src="assets\images\{{Movie.imagePath}}">
+    <div class="card-body ml-5">
+        <div class="d-flex">
+        <h3>{{Movie.name}}</h3>
+        <button type="button" class="btn btn-success ml-5" routerLink="/details/{{Movie.id}}">View</button>
+        </div>
+        <b>{{Movie.language}}</b>
+    </div>
+</div>
