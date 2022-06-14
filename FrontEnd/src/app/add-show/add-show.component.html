@@ -1,0 +1,15 @@
+<div class="form">
+    <div class="form-group">
+      <label>Movie Id</label>
+      <input [(ngModel)]="movieId" type="text" class="form-control" >
+    </div>
+    <div class="form-group">
+        <label>Theater Id</label>
+        <input [(ngModel)]="theaterId" type="text" class="form-control" >
+    </div>
+    <div class="form-group">
+        <label>Show Id</label>
+        <input [(ngModel)]="showId" type="text" class="form-control">
+    </div>
+    <button (click)="onAdd()" type="submit" class="btn btn-primary">Add</button>
+</div>

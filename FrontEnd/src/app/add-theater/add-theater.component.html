@@ -1,0 +1,11 @@
+<div class="form">
+    <div class="form-group">
+      <label>Theater Name</label>
+      <input [(ngModel)]="theaterName" type="text" class="form-control"  placeholder="Enter Theater Name">
+    </div>
+    <div class="form-group">
+        <label>Location</label>
+        <input [(ngModel)]="theaterLocation" type="text" class="form-control"  placeholder="Enter Location">
+    </div>
+    <button (click)="onAdd()" type="submit" class="btn btn-primary">Add</button>
+</div>

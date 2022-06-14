@@ -1,0 +1,15 @@
+<div class="form">
+    <div class="form-group">
+      <label>Movie Name</label>
+      <input [(ngModel)]="movieName" type="text" class="form-control"  placeholder="Enter Movie Name">
+    </div>
+    <div class="form-group">
+        <label>Language</label>
+        <input [(ngModel)]="language" type="text" class="form-control"  placeholder="Enter Language">
+    </div>
+    <div class="form-group">
+        <label>Movie Path</label>
+        <input [(ngModel)]="moviePath" type="text" class="form-control" placeholder="Enter MoviePath">
+    </div>
+    <button (click)="onAdd()" type="submit" class="btn btn-primary">Add</button>
+</div>
